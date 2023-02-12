@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Week 3</string>
+    <string name="good_morning">Good morning!</string>
+    <string name="hearticon">heartIcon</string>
+    <string name="hamburger_menu">hamburger menu</string>
+    <string name="search">Search...</string>
+    <string name="userName">Josh</string>
+    <string name="san_fransisco_ca">SAN FRANSISCO, CA</string>
+    <string name="follow_josh">FOLLOW JOSH</string>
+    <string name="message">MESSAGE</string>
+    <string name="see_more">SEE MORE</string>
+    <string name="navbar">Navbar</string>
+    <string name="architectureImg">Architecture</string>
+    <string name="dogimage">DogImage</string>
+    <string name="dance_girl">dance girl</string>
+    <string name="dance_couple">dance couple</string>
+    <string name="sun_flowers">Sun flowers</string>
+    <string name="island">island</string>
+    <string name="img7">TODO</string>
+    <string name="img8">img8</string>
+    <string name="image9">Image9</string>
+</resources>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAlignment="center"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/goodMorning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/good_morning"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/heartsImg"
+            android:layout_width="29dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/hearticon"
+            app:layout_constraintBottom_toBottomOf="@+id/goodMorning"
+            app:layout_constraintStart_toEndOf="@+id/goodMorning"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/hearts" />
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="380dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:autofillHints=""
+            android:hint="@string/search"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.13999999" />
+
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa"
+                android:text="@string/userName"
+                android:textColor="#000000"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_image"
+                app:layout_constraintVertical_bias="0.095" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="48dp"
+                android:src="@drawable/headshot"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/search_bar" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:text="@string/san_fransisco_ca"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/userName"
+                app:layout_constraintVertical_bias="0.026" />
+
+            <Button
+                android:id="@+id/follow"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="18dp"
+                android:backgroundTint="@color/black"
+                android:fontFamily="@font/roboto"
+                android:padding="10dp"
+                android:text="@string/follow_josh"
+                android:textAllCaps="true"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"
+                app:iconPadding="10dp"
+                app:layout_constraintBottom_toTopOf="@id/message"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView3" />
+
+            <GridLayout
+                android:id="@+id/img_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="46dp"
+                android:alignmentMode="alignMargins"
+                android:columnCount="3"
+                android:paddingStart="38dp"
+                android:paddingEnd="38dp"
+                android:rowCount="3"
+                app:layout_constraintTop_toBottomOf="@id/message">
+
+                <ImageView
+                    android:id="@+id/image_view_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/architectureImg"
+                    android:src="@drawable/pic1" />
+
+                <ImageView
+                    android:id="@+id/image_view_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_row="0"
+                    android:layout_rowWeight="1"
+                    android:layout_column="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/dogimage"
+                    android:src="@drawable/pic2"
+                    tools:ignore="ImageContrastCheck" />
+
+                <ImageView
+                    android:id="@+id/image_view_3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/dance_girl"
+                    android:src="@drawable/pic3" />
+
+                <ImageView
+                    android:id="@+id/image_view_4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/dance_couple"
+                    android:src="@drawable/pic4" />
+
+                <ImageView
+                    android:id="@+id/image_view_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/sun_flowers"
+                    android:src="@drawable/pic5"
+                    tools:ignore="ImageContrastCheck" />
+
+                <ImageView
+                    android:id="@+id/image_view_6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/island"
+                    android:src="@drawable/pic6"
+                    tools:ignore="ImageContrastCheck" />
+
+                <ImageView
+                    android:id="@+id/image_view_7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/pic7"
+                    android:contentDescription="@string/img7" />
+
+                <ImageView
+                    android:id="@+id/image_view_8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/img8"
+                    android:src="@drawable/pic8" />
+
+                <ImageView
+                    android:id="@+id/image_view_9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/image9"
+                    android:src="@drawable/pic9" />
+
+            </GridLayout>
+
+
+            <Button
+                android:id="@+id/message"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="196dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/roboto"
+                android:padding="10dp"
+                android:text="@string/message"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:cornerRadius="8dp"
+                app:iconPadding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.505"
+                app:layout_constraintStart_toStartOf="parent"
+                app:strokeColor="#000000"
+                app:strokeWidth="2dp" />
+
+
+    <Button
+        android:id="@+id/seeMore"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
+        android:elevation="2dp"
+        android:padding="10dp"
+        android:text="@string/see_more"
+        android:textColor="@color/black"
+        app:cornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_grid"
+        app:strokeColor="#000000"
+        app:strokeWidth="2dp" />
+
+            <ImageView
+                android:id="@+id/navbar"
+                android:layout_width="39dp"
+                android:layout_height="34dp"
+                android:layout_marginTop="28dp"
+                android:contentDescription="@string/navbar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.889"
+                app:layout_constraintStart_toEndOf="@+id/heartsImg"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/navbar" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
